@@ -24,11 +24,8 @@ body {
 
 /* changes the background image, the image is not going to tile (repeat itslef), its centered both horizontally and vertically, and its set to cover the entire nav. */
 body>header nav.tabs {
-    background-image: url(sf_back1.png);
-    background-repeat: no-repeat;
+    background: url(sf_back1.png) center center no-repeat;
     background-size: cover;
-    width: auto;
-    height: auto;
 }
 
 /* setting the perspective of the nav to a 3D space with 50 pixels and rotating it 20° around the x-axis */
@@ -42,11 +39,13 @@ body>header nav.tabs li:hover {
 }
 
 /* Left Section Styles */
+/* adds a 1 pixel solid border with a raduis with 25%, the radius is making the corners round. */
 section#left nav.vertical {
     border: 1px solid rgb(20, 167, 170);
     border-radius: 25px;
 }
 
+/* adds a raduis 25% to the border, the radius is making the corners round. */
 section#left nav.vertical h1 {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
@@ -54,7 +53,24 @@ section#left nav.vertical h1 {
 
 /* Center Article Styles */
 
-
-
+/* adds a radialgradient to the background with a white center, has a color stop of 30%. It transitions to a light gray color. Adds a  1-pixel solid border with the color gray value with a radius of 50 pixels. Adds a box shadow with horizontal and vertical offsets of 10 pixels with a 20-pixel blur and a color of dark gray.*/
+section#center article {
+    background: radial-gradient(white 30%, rgb(151, 151, 151));
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 50px;
+    box-shadow: 10px 0px 20px rgb(51, 51, 51);
+}
 
 /* Blockquote Styles */
+
+/* this is setting the background image to the linked image, the image is not repeating itself, makes the imgage cover 100% of the blockquote, adds a filter. */
+blockquote {
+    background: url(sf_speech.png) no-repeat;
+    background-size: 100% 100%;
+    filter: drop-shadow(5px 0px 10px rgb(51, 51, 51));
+}
+
+/* this makes the imgaes circular. */
+cite img {
+    border-radius: 50%;
+}
